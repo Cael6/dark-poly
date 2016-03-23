@@ -1,23 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HeroController : MonoBehaviour {
+public class HeroController : MonoBehaviour
+{
 
     public float maxMoveSpeed = 10f;
-    public float maxTurnSpeed = 0.5f;
+    public float maxTurnSpeed = 20f;
     public Terrain mainTerrain;
 
     Vector3 latestDestination;
+    bool isAtDestination;
 
-	void Start () {
-	
-	}
-	
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
 
         detectNewDestination();
 
-        if (transform.position != latestDestination)
+        if (!isAtDestination)
         {
             //Turn to look at latest Destination
             Vector3 targetDir = latestDestination - transform.position;
@@ -29,31 +33,34 @@ public class HeroController : MonoBehaviour {
             if (distanceToDestination < maxMoveSpeed * Time.deltaTime)
             {
                 transform.position = latestDestination;
+                isAtDestination = true;
             }
             else
             {
                 transform.Translate(Vector3.forward * maxMoveSpeed * Time.deltaTime);
             }
         }
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        //}
 
-        //if (Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
-        //}
 
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-        //}
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(Vector3.forward * maxMoveSpeed * Time.deltaTime);
+        }
 
-        //if (Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
-        //}
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(-Vector3.forward * maxMoveSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(Vector3.up, -maxTurnSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(Vector3.up, maxTurnSpeed * Time.deltaTime);
+        }
     }
 
     void detectNewDestination()
@@ -66,6 +73,7 @@ public class HeroController : MonoBehaviour {
             {
                 latestDestination = new Vector3(hit.point.x, transform.position.y, hit.point.z);
             }
+            isAtDestination = false;
         }
     }
 }
