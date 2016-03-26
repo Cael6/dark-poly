@@ -70,7 +70,9 @@ ModelImporter:
     4300000: Barbarian
     4300002: Plane_001
     4300004: Plane
-    7400000: Default Take
+    7400000: idle
+    7400002: Armature_000Action_001
+    7400004: Default Take
     9500000: //RootNode
     13700000: Barbarian
   materials:
@@ -93,7 +95,247 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Default Take
+      firstFrame: 2
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_000
+        weight: 1
+      - path: Armature_000/Elbow_L
+        weight: 1
+      - path: Armature_000/Elbow_R
+        weight: 1
+      - path: Armature_000/Knee_L
+        weight: 1
+      - path: Armature_000/Knee_R
+        weight: 1
+      - path: Armature_000/Torso
+        weight: 1
+      - path: Armature_000/Torso/Chest
+        weight: 1
+      - path: Armature_000/Torso/Chest/Head
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L/Lower_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R/Lower_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L/Foot__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R/Foot__R
+        weight: 1
+      - path: Barbarian
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Armature_000Action_001
+      takeName: Armature_000Action_001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_000
+        weight: 1
+      - path: Armature_000/Elbow_L
+        weight: 1
+      - path: Armature_000/Elbow_R
+        weight: 1
+      - path: Armature_000/Knee_L
+        weight: 1
+      - path: Armature_000/Knee_R
+        weight: 1
+      - path: Armature_000/Torso
+        weight: 1
+      - path: Armature_000/Torso/Chest
+        weight: 1
+      - path: Armature_000/Torso/Chest/Head
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L/Lower_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R/Lower_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L/Foot__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R/Foot__R
+        weight: 1
+      - path: Barbarian
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_000
+        weight: 1
+      - path: Armature_000/Elbow_L
+        weight: 1
+      - path: Armature_000/Elbow_R
+        weight: 1
+      - path: Armature_000/Knee_L
+        weight: 1
+      - path: Armature_000/Knee_R
+        weight: 1
+      - path: Armature_000/Torso
+        weight: 1
+      - path: Armature_000/Torso/Chest
+        weight: 1
+      - path: Armature_000/Torso/Chest/Head
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__L/Lower_ARm_L/Palm_L/Upper_Finger_L/Lower_Finger_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Arm__R/Lower_ARm_R/Palm_R/Upper_Finger_R/Lower_Finger_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_L/Lower_Leg_L/Foot__L
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R
+        weight: 1
+      - path: Armature_000/Torso/Upper_Leg_R/Lower_Leg_R/Foot__R
+        weight: 1
+      - path: Barbarian
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

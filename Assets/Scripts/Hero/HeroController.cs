@@ -6,14 +6,21 @@ public class HeroController : MonoBehaviour
 
     public float maxMoveSpeed = 10f;
     public float maxTurnSpeed = 20f;
-    public Terrain mainTerrain;
+    public GridManager gridMan;
+    public int startGridX = 2;
+    public int startGridY = 2;
 
     Vector3 latestDestination;
     bool isAtDestination;
+    GridZone targetGridZone;
+    
+    GridZone currentZone;
 
     void Start()
     {
-
+        currentZone = gridMan.gridZones[startGridX][startGridY];
+        transform.position = new Vector3(currentZone.transform.position.x, transform.position.y, currentZone.transform.position.z);
+        isAtDestination = true;
     }
 
     void Update()
@@ -33,6 +40,7 @@ public class HeroController : MonoBehaviour
             if (distanceToDestination < maxMoveSpeed * Time.deltaTime)
             {
                 transform.position = latestDestination;
+                currentZone = targetGridZone;
                 isAtDestination = true;
             }
             else
@@ -65,13 +73,17 @@ public class HeroController : MonoBehaviour
 
     void detectNewDestination()
     {
-        if (Input.GetMouseButton(1)) //Right click
+        if (Input.GetMouseButtonDown(1)) //Right click
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (mainTerrain.GetComponent<Collider>().Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, 100))
             {
-                latestDestination = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+                if (hit.transform.gameObject.tag == ("GridZone"))
+                {
+                    targetGridZone = hit.transform.gameObject.GetComponent<GridZone>();
+                    latestDestination = targetGridZone.transform.position;
+                }
             }
             isAtDestination = false;
         }

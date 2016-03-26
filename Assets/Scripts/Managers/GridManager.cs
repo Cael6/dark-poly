@@ -3,24 +3,30 @@ using System.Collections;
 
 public class GridManager : MonoBehaviour {
 
-    public GameObject[][] gridZones;
-    public GameObject gridZoneObj;
+    public GridZone[][] gridZones;
+    public GridZone gridZoneObj;
 
     public int gridRows = 100;
     public int gridCols = 100;
 
+    float zonePadding = 0.05f;
+
 	// Use this for initialization
-	void Start () {
-        gridZones = new GameObject[gridRows][];
+	void Awake () {
+        gridZones = new GridZone[gridRows][];
 	    for (int i = 0; i < gridRows; i++)
         {
-            gridZones[i] = new GameObject[gridCols];
+            gridZones[i] = new GridZone[gridCols];
             for (int j = 0; j < gridCols; j++)
             {
-                Vector3 zoneTranslate = new Vector3(i * gridZoneObj.GetComponent<Renderer>().bounds.size.x, 0.01f, j * gridZoneObj.GetComponent<Renderer>().bounds.size.z);
+                float xPos = i * (gridZoneObj.GetComponent<Renderer>().bounds.size.x + zonePadding);
+                float yPos = 0.01f;
+                float zPos = j * (gridZoneObj.GetComponent<Renderer>().bounds.size.z + zonePadding);
+                Vector3 zoneTranslate = new Vector3(xPos, yPos, zPos);
                 Quaternion zoneRotation = Quaternion.Euler(new Vector3(90, 0, 0));
-                gridZones[i][j] = (GameObject) Instantiate(gridZoneObj, zoneTranslate, zoneRotation);
-                Debug.Log(gridZones[i][j].transform.position.x + " " + gridZones[i][j].transform.position.z);
+                gridZones[i][j] = (GridZone) Instantiate(gridZoneObj, zoneTranslate, zoneRotation);
+                gridZones[i][j].zoneX = i;
+                gridZones[i][j].zoneY = j;
             }
         }
 
