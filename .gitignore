@@ -24,3 +24,5 @@ ExportedObj/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+*.blend1
+Assets/Models/Environment/Hill2.blend2
